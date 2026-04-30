@@ -78,7 +78,28 @@ int main (){
                         printf("Ambos numeros son iguales.\n");
                     }
                 break;
+            case 8: //Mostrar numeros entre un intervalo incluyendo los números del intervalo
+                printf("Ingrese el primer numero: ");
+                scanf("%d", &num1);
+                printf("Ingrese el segundo numero: ");
+                scanf("%d", &num2);
+                    if (num1 < num2) {
+                        printf("Numeros en el intervalo [%d,%d]: ", num1, num2);
+                        for (int i = num1; i <= num2; i++) {
+                            printf("%d ", i);
+                        }
+                        printf("\n");
+                    } else if (num1 > num2) {
+                        printf("Numeros en el intervalo [%d,%d]: ", num2, num1);
+                        for (int i = num1; i >= num2; i--) {
+                            printf("%d ", i);
+                        }
+                        printf("\n");
+                    } else {
+                        printf("Ingrese dos numeros diferentes para mostrar el intervalo.\n");
+                    }
+                break;
         } 
-    }while (op != 0);
+    }while (op != 0 || op < 0 || op > 8);
     return 0; 
 }
