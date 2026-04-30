@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h> 
 
 int main (){
     //Declaracion de variables
@@ -15,38 +16,44 @@ int main (){
     
         switch (op) {
             case 1: //Suma
-            printf("Ingrese el primer numero: ");
-            scanf("%d", &num1);
-            printf("Ingrese el segundo numero: ");
-            scanf("%d", &num2);
-            printf("El resultado de la suma es: %d\n", num1 + num2);
-            break;
+                printf("Ingrese el primer numero: ");
+                scanf("%d", &num1);
+                printf("Ingrese el segundo numero: ");
+                scanf("%d", &num2);
+                printf("El resultado de la suma es: %d\n", num1 + num2);
+                break;
             case 2: //Resta
-            printf("Ingrese el primer numero: ");
-            scanf("%f", &f1);
-            printf("Ingrese el segundo numero: ");
-            scanf("%f", &f2);
-            printf("El resultado de la resta es: %.2f\n", f1 - f2);
-            break;
+                printf("Ingrese el primer numero: ");
+                scanf("%f", &f1);
+                printf("Ingrese el segundo numero: ");
+                scanf("%f", &f2);
+                printf("El resultado de la resta es: %.2f\n", f1 - f2);
+                break;
             case 3: //Multiplicacion
-            printf("Ingrese el primer numero: ");   
-            scanf("%f", &f1);
-            printf("Ingrese el segundo numero: ");
-            scanf("%f", &f2);
-            printf("El resultado de la multiplicacion es: %.2f\n", f1 * f2);
-            break;
+                printf("Ingrese el primer numero: ");   
+                scanf("%f", &f1);
+                printf("Ingrese el segundo numero: ");
+                scanf("%f", &f2);
+                printf("El resultado de la multiplicacion es: %.2f\n", f1 * f2);
+                break;
             case 4: //Division
-            printf("Ingrese el primer numero: ");
-            scanf("%f", &f1);
-            printf("Ingrese el segundo numero: ");
-            scanf("%f", &f2);
-                if (f2 != 0) {
-                    printf("El resultado de la division es: %.2f\n", f1 / f2);
-                } else {
-                    printf("Error: No se puede dividir por cero.\n");
-                    op = 4; // Mantener la opción para que el usuario pueda corregir el error
-                }
-            break;
+                printf("Ingrese el primer numero: ");
+                scanf("%f", &f1);
+                printf("Ingrese el segundo numero: ");
+                scanf("%f", &f2);
+                    if (f2 != 0) {
+                        printf("El resultado de la division es: %.2f\n", f1 / f2);
+                    } else {
+                        printf("Error: No se puede dividir por cero.\n");
+                    }
+                break;
+            case 5: //Potencia
+                printf("Ingrese la base: ");    
+                scanf("%f", &f1);
+                printf("Ingrese el exponente: ");
+                scanf("%f", &f2);
+                printf("El resultado de la potencia es: %.2f\n", pow(f1, f2));
+                break;
         } 
     }while (op != 0);
     return 0; 
