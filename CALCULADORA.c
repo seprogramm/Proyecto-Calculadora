@@ -2,12 +2,24 @@
 
 void main (void){
     //Declaracion de variables
-    float num1, num2, op; 
+    int num1, num2, op; 
+    float f1, f2; 
 
     //Menu de opciones
     printf("\n--------------------CALCULADORA EN C--------------------\n\n"); 
     printf("1. Suma\n2. Resta\n3. Multiplicacion\n4. Division\n5. Potencia\n6. Residuo de una division\n7. Compare los numeros\n8. Mostrar numeros entre un intervalo\n");  
     printf("\nElija la operacion que desea realizar: ");
-    scanf("%f", &op); 
+    scanf("%d", &op); 
     fflush(stdin); 
+
+    switch (op)
+    {
+    case 1:
+        printf("Ingrese el primer numero: ");
+        scanf("%d", &num1);
+        printf("Ingrese el segundo numero: ");
+        scanf("%d", &num2);
+        printf("El resultado de la suma es: %d\n", num1 + num2);
+        break;
+    }
 }
