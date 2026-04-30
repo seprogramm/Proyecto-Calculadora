@@ -21,5 +21,12 @@ void main (void){
         scanf("%d", &num2);
         printf("El resultado de la suma es: %d\n", num1 + num2);
         break;
+    case 2:
+        printf("Ingrese el primer numero: ");
+        scanf("%f", &f1);
+        printf("Ingrese el segundo numero: ");
+        scanf("%f", &f2);
+        printf("El resultado de la resta es: %.2f\n", f1 - f2);
+        break;
     }
 }
