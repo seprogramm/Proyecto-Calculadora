@@ -54,6 +54,17 @@ int main (){
                 scanf("%f", &f2);
                 printf("El resultado de la potencia es: %.2f\n", pow(f1, f2));
                 break;
+            case 6: //Residuo de una division
+                    printf("Ingrese el primer numero: ");
+                    scanf("%d", &num1);
+                    printf("Ingrese el segundo numero: ");
+                    scanf("%d", &num2);
+                    if (num2 != 0) {
+                        printf("El residuo de %d/%d es: %d\n", num1, num2, num1 % num2);
+                    } else {
+                        printf("Error: No se puede dividir por cero.\n");
+                    }
+                break;
         } 
     }while (op != 0);
     return 0; 
