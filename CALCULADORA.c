@@ -65,6 +65,19 @@ int main (){
                         printf("Error: No se puede dividir por cero.\n");
                     }
                 break;
+            case 7: //Comparar los numeros
+                printf("Ingrese el primer numero: ");
+                scanf("%f", &f1);
+                printf("Ingrese el segundo numero: ");
+                scanf("%f", &f2);
+                    if (f1 > f2) {
+                        printf("%.2f es mayor que %.2f\n", f1, f2);
+                    } else if (f1 < f2) {
+                        printf("%.2f es menor que %.2f\n", f1, f2);
+                    } else {
+                        printf("Ambos numeros son iguales.\n");
+                    }
+                break;
         } 
     }while (op != 0);
     return 0; 
