@@ -14,28 +14,28 @@ int main (){
         fflush(stdin);  
     
         switch (op) {
-            case 1:
+            case 1: //Suma
             printf("Ingrese el primer numero: ");
             scanf("%d", &num1);
             printf("Ingrese el segundo numero: ");
             scanf("%d", &num2);
             printf("El resultado de la suma es: %d\n", num1 + num2);
             break;
-            case 2:
+            case 2: //Resta
             printf("Ingrese el primer numero: ");
             scanf("%f", &f1);
             printf("Ingrese el segundo numero: ");
             scanf("%f", &f2);
             printf("El resultado de la resta es: %.2f\n", f1 - f2);
             break;
-            case 3:
+            case 3: //Multiplicacion
             printf("Ingrese el primer numero: ");   
             scanf("%f", &f1);
             printf("Ingrese el segundo numero: ");
             scanf("%f", &f2);
             printf("El resultado de la multiplicacion es: %.2f\n", f1 * f2);
             break;
-            case 4:
+            case 4: //Division
             printf("Ingrese el primer numero: ");
             scanf("%f", &f1);
             printf("Ingrese el segundo numero: ");
@@ -44,6 +44,7 @@ int main (){
                     printf("El resultado de la division es: %.2f\n", f1 / f2);
                 } else {
                     printf("Error: No se puede dividir por cero.\n");
+                    op = 4; // Mantener la opción para que el usuario pueda corregir el error
                 }
             break;
         } 
